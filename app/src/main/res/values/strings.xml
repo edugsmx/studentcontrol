@@ -2,11 +2,35 @@
     <string name="app_name">Controle de Alunos</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Matter Activity -->
+    <string name="add_matter_textView_edit">Editar</string>
+    <string name="add_matter_ediText_name">Nome</string>
+    <string name="add_matter_ediText_email">E-mail</string>
+    <string name="add_matter_ediText_phone">Telefone</string>
+    <string name="add_matter_ediText_address">Endereço</string>
+    <string name="add_matter_ediText_addressNumber">Número</string>
+    <string name="add_matter_ediText_addressComplement">Complemento</string>
+    <string name="add_matter_ediText_password">Senha</string>
+    <string name="add_matter_ediText_confirmPassword">Confirmar Senha</string>
+    <string name="add_matter_button_checkChange">Verificar alteração</string>
+    <string name="add_matter_button_cancel">Cancelar</string>
+
+    <!-- Navigation -->
     <string name="nav_header_title">Controle de Estudantes</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
+
+    <!-- Menu Action -->
     <string name="action_settings">Configurações</string>
     <string name="action_logout">Sair</string>
+
+    <string name="menu_register">Cadastrar</string>
+    <string name="menu_add_teatcher">Professor</string>
+    <string name="menu_add_student">Aluno</string>
+    <string name="menu_add_matter">Matéria</string>
+    <string name="menu_social">Social</string>
+    <string name="menu_ic_share">Compartilhar</string>
 
     <!-- Login Activity -->
     <string name="login_button_send">Entrar</string>
@@ -18,15 +42,15 @@
     <string name="login_textView_register"><u>Registre-se</u></string>
 
     <!-- Register Activity -->
-    <string name="editProfile_textView_edit">Editar</string>
-    <string name="editProfile_ediText_name">Nome</string>
-    <string name="editProfile_ediText_email">E-mail</string>
-    <string name="editProfile_ediText_phone">Telefone</string>
-    <string name="editProfile_ediText_address">Endereço</string>
-    <string name="editProfile_ediText_addressNumber">Número</string>
-    <string name="editProfile_ediText_addressComplement">Complemento</string>
-    <string name="editProfile_ediText_password">Senha</string>
-    <string name="editProfile_ediText_confirmPassword">Confirmar Senha</string>
-    <string name="editProfile_button_checkChange">Verificar alteração</string>
-    <string name="editProfile_button_cancel">Cancelar</string>
+    <string name="register_textView_edit">Editar</string>
+    <string name="register_ediText_name">Nome</string>
+    <string name="register_ediText_email">E-mail</string>
+    <string name="register_ediText_phone">Telefone</string>
+    <string name="register_ediText_address">Endereço</string>
+    <string name="register_ediText_addressNumber">Número</string>
+    <string name="register_ediText_addressComplement">Complemento</string>
+    <string name="register_ediText_password">Senha</string>
+    <string name="register_ediText_confirmPassword">Confirmar Senha</string>
+    <string name="register_button_checkChange">Verificar alteração</string>
+    <string name="register_button_cancel">Cancelar</string>
 </resources>

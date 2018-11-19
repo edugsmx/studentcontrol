@@ -18,10 +18,11 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        TextView login = findViewById(R.id.login_button_send);
-        TextView register = findViewById(R.id.login_textView_register);
+        TextView textViewSend = findViewById(R.id.login_button_send);
+        TextView textViewHelp = findViewById(R.id.login_textView_help);
+        TextView textViewRegister = findViewById(R.id.login_textView_register);
 
-        login.setOnClickListener(new View.OnClickListener() {
+        textViewSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
@@ -30,7 +31,15 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        register.setOnClickListener(new View.OnClickListener() {
+        textViewHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        textViewRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);

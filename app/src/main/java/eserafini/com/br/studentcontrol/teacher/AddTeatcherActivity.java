@@ -1,16 +1,16 @@
-package eserafini.com.br.studentcontrol.ui.main;
+package eserafini.com.br.studentcontrol.teacher;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 
 import eserafini.com.br.studentcontrol.R;
 
-public class RegisterActivity extends AppCompatActivity {
+public class AddTeatcherActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_add_teatcher);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }
