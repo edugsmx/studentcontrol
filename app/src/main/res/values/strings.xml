@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Controle de Estudantes</string>
+    <string name="app_name">Controle de Alunos</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Controle de Estudantes</string>
@@ -7,6 +7,26 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Configurações</string>
     <string name="action_logout">Sair</string>
-    <string name="login_help"><u>Clique aqui para ajuda</u></string>
-    <string name="login_register"><u>Registre-se</u></string>
+
+    <!-- Login Activity -->
+    <string name="login_button_send">Entrar</string>
+    <string name="login_editText_email">E-mail</string>
+    <string name="login_editText_password">Senha</string>
+    <string name="login_textView_info1">Esqueceu o seu usuário ou senha?</string>
+    <string name="login_textView_help"><u>Clique aqui para ajuda</u></string>
+    <string name="login_textView_info2">Não tem uma conta?</string>
+    <string name="login_textView_register"><u>Registre-se</u></string>
+
+    <!-- Register Activity -->
+    <string name="editProfile_textView_edit">Editar</string>
+    <string name="editProfile_ediText_name">Nome</string>
+    <string name="editProfile_ediText_email">E-mail</string>
+    <string name="editProfile_ediText_phone">Telefone</string>
+    <string name="editProfile_ediText_address">Endereço</string>
+    <string name="editProfile_ediText_addressNumber">Número</string>
+    <string name="editProfile_ediText_addressComplement">Complemento</string>
+    <string name="editProfile_ediText_password">Senha</string>
+    <string name="editProfile_ediText_confirmPassword">Confirmar Senha</string>
+    <string name="editProfile_button_checkChange">Verificar alteração</string>
+    <string name="editProfile_button_cancel">Cancelar</string>
 </resources>

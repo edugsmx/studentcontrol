@@ -1,8 +1,10 @@
-package eserafini.com.br.studentcontrol;
+package eserafini.com.br.studentcontrol.ui.main;
 
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import eserafini.com.br.studentcontrol.R;
 
 public class RegisterActivity extends AppCompatActivity {
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".ui.auth.LoginActivity">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -33,72 +33,293 @@
             app:layout_constraintTop_toBottomOf="@+id/login_imageView_logo" />
 
         <EditText
-            android:id="@+id/login_editText_email"
+            android:id="@+id/editProfile_ediText_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
             android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
-            android:ems="10"
-            android:hint="E-mail"
-            android:inputType="text|textPersonName"
-            android:text=""
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/login_textView_info" />
-
-        <EditText
-            android:id="@+id/login_editText_user"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:layout_marginEnd="30dp"
-            android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="8dp"
             android:ems="10"
-            android:hint="Número do celular"
-            android:inputType="text|textPersonName"
-            android:text=""
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/login_editText_email" />
-
-        <EditText
-            android:id="@+id/login_editText_password"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:hint="Senha"
+            android:hint="@string/editProfile_ediText_name"
             android:inputType="textPersonName"
             android:text=""
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/login_editText_user" />
+            app:layout_constraintTop_toBottomOf="@+id/login_textView_info" />
 
-        <Button
-            android:id="@+id/login_button_send"
+        <TextView
+            android:id="@+id/editProfile_ediText_invalidName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="30dp"
+            android:text=""
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="10sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/editProfile_ediText_name"
+            app:layout_constraintTop_toTopOf="@+id/editProfile_ediText_name"
+            tools:ignore="SmallSp" />
+
+        <EditText
+            android:id="@+id/editProfile_ediText_email"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="8dp"
-            android:text="CADASTRAR"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:ems="10"
+            android:hint="@string/editProfile_ediText_email"
+            android:inputType="textEmailAddress"
+            android:text=""
+            android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/login_editText_password" />
+            app:layout_constraintTop_toBottomOf="@+id/editProfile_ediText_name" />
+
+        <TextView
+            android:id="@+id/editProfile_ediText_invalidEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="30dp"
+            android:text=""
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="10sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/editProfile_ediText_email"
+            app:layout_constraintTop_toTopOf="@+id/editProfile_ediText_email"
+            tools:ignore="SmallSp" />
+
+        <com.santalu.widget.MaskEditText
+            android:id="@+id/editProfile_ediText_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:ems="10"
+            android:hint="@string/editProfile_ediText_phone"
+            android:inputType="phone"
+            android:text=""
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editProfile_ediText_email"
+            app:met_mask="(##) #########" />
+
+        <TextView
+            android:id="@+id/editProfile_ediText_invalidPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="30dp"
+            android:text=""
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="10sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/editProfile_ediText_phone"
+            app:layout_constraintTop_toTopOf="@+id/editProfile_ediText_phone"
+            tools:ignore="SmallSp" />
+
+        <EditText
+            android:id="@+id/editProfile_ediText_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:ems="10"
+            android:hint="@string/editProfile_ediText_address"
+            android:inputType="textPostalAddress"
+            android:text=""
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editProfile_ediText_phone" />
+
+        <TextView
+            android:id="@+id/editProfile_ediText_invalidAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="30dp"
+            android:text=""
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="10sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/editProfile_ediText_address"
+            app:layout_constraintTop_toTopOf="@+id/editProfile_ediText_address"
+            tools:ignore="SmallSp" />
+
+        <EditText
+            android:id="@+id/editProfile_ediText_addressNumber"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/editProfile_ediText_addressNumber"
+            android:inputType="numberDecimal"
+            android:nextFocusDown="@id/editProfile_ediText_addressComplement"
+            android:text=""
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/editProfile_ediText_addressComplement"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editProfile_ediText_address" />
+
+        <TextView
+            android:id="@+id/editProfile_ediText_invalidAddressNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="30dp"
+            android:text=""
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="10sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/editProfile_ediText_addressNumber"
+            app:layout_constraintTop_toTopOf="@+id/editProfile_ediText_addressNumber"
+            tools:ignore="SmallSp" />
+
+        <EditText
+            android:id="@+id/editProfile_ediText_addressComplement"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:ems="10"
+            android:hint="@string/editProfile_ediText_addressComplement"
+            android:inputType="textPostalAddress"
+            android:nextFocusDown="@id/editProfile_ediText_password"
+            android:text=""
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/editProfile_ediText_addressNumber"
+            app:layout_constraintTop_toBottomOf="@+id/editProfile_ediText_address" />
+
+        <TextView
+            android:id="@+id/editProfile_ediText_invalidAddressComplement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="30dp"
+            android:text=""
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="10sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/editProfile_ediText_addressComplement"
+            app:layout_constraintTop_toTopOf="@+id/editProfile_ediText_addressComplement"
+            tools:ignore="SmallSp" />
+
+        <EditText
+            android:id="@+id/editProfile_ediText_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/editProfile_ediText_password"
+            android:inputType="textPassword"
+            android:nextFocusDown="@id/editProfile_ediText_password"
+            android:text=""
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/editProfile_ediText_confirmPassword"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editProfile_ediText_addressNumber" />
+
+        <TextView
+            android:id="@+id/editProfile_ediText_invalidPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="30dp"
+            android:text=""
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="10sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/editProfile_ediText_password"
+            app:layout_constraintTop_toTopOf="@+id/editProfile_ediText_password"
+            tools:ignore="SmallSp" />
+
+        <EditText
+            android:id="@+id/editProfile_ediText_confirmPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:ems="10"
+            android:hint="@string/editProfile_ediText_confirmPassword"
+            android:inputType="textPassword"
+            android:text=""
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/editProfile_ediText_password"
+            app:layout_constraintTop_toBottomOf="@+id/editProfile_ediText_addressComplement" />
+
+        <TextView
+            android:id="@+id/editProfile_ediText_invalidConfirmPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="30dp"
+            android:text=""
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="10sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/editProfile_ediText_confirmPassword"
+            app:layout_constraintTop_toTopOf="@+id/editProfile_ediText_confirmPassword"
+            tools:ignore="SmallSp" />
+
+        <Button
+            android:id="@+id/editProfile_button_cancel"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/editProfile_button_cancel"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editProfile_ediText_password" />
 
     </android.support.constraint.ConstraintLayout>
 
