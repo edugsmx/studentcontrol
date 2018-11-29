@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -23,7 +22,7 @@ import eserafini.com.br.studentcontrol.matter.AddMatterActivity;
 import eserafini.com.br.studentcontrol.matter.InternMatterActivity;
 import eserafini.com.br.studentcontrol.matter.MatterAdapter;
 import eserafini.com.br.studentcontrol.student.AddStudentActivity;
-import eserafini.com.br.studentcontrol.teacher.AddTeatcherActivity;
+import eserafini.com.br.studentcontrol.teacher.TeatcherActivity;
 import eserafini.com.br.studentcontrol.ui.auth.LoginActivity;
 import eserafini.com.br.studentcontrol.util.GridSpacingItemDecoration;
 
@@ -131,7 +130,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.fab) {
 
         } else if (id == R.id.menu_add_teacher) {
-            Intent intent = new Intent(MainActivity.this, AddTeatcherActivity.class);
+            Intent intent = new Intent(MainActivity.this, TeatcherActivity.class);
             startActivity(intent);
 
         } else if (id == R.id.menu_add_student) {

@@ -4,7 +4,7 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
-        <item android:title="@string/menu_register">
+        <item android:title="Opções">
             <menu>
                 <item
                     android:id="@+id/menu_add_teacher"
@@ -19,6 +19,10 @@
                     android:id="@+id/menu_add_matter"
                     android:icon="@drawable/ic_menu_book"
                     android:title="@string/menu_add_matter" />
+                <item
+                    android:id="@+id/menu_add_classroom"
+                    android:icon="@drawable/ic_classroom"
+                    android:title="Turma" />
             </menu>
         </item>
         <item android:title="@string/menu_social">
